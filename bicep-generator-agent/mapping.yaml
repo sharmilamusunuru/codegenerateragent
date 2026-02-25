@@ -1,0 +1,28 @@
+# Custom shape-to-Azure mapping overrides
+#
+# Use this file to override or extend the built-in shape map.
+# Pass the file path via:  python main.py --mapping mapping.yaml
+#
+# Each entry under shape_overrides maps a draw.io shape key
+# (the value of the shape= attribute, lowercased) to an Azure
+# resource type and short identifier used in Bicep generation.
+#
+# Each entry under label_overrides maps a cell label (lowercased)
+# to an Azure resource type.
+
+shape_overrides:
+  # Example: custom company shape for a proprietary gateway
+  # mxgraph.company.gateway:
+  #   azure_type: Microsoft.Network/applicationGateways
+  #   short_type: appgw
+
+  # Example: re-map an unofficial icon to a resource type
+  # mxgraph.azure2.compute.virtual_machine:
+  #   azure_type: Microsoft.Compute/virtualMachines
+  #   short_type: vm
+
+label_overrides:
+  # Example: catch diagrams labelled with custom names
+  # my custom app:
+  #   azure_type: Microsoft.Web/sites
+  #   short_type: app
